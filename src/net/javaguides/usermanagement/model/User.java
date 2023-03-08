@@ -1,40 +1,35 @@
 package net.javaguides.usermanagement.model;
 
-/**
- * User.java
- * This is a model class represents a User entity
- * @author Ramesh Fadatare
- *
- */
 public class User {
-	protected int id;
-	protected String name;
-	protected String email;
-	protected String country;
+	private int NIC;
+	private String name;
+	private String Department;
+	private String date;
+	private String Designation;
 	
-	public User() {
+
+	public User(int nIC, String name, String department, String date, String designation) {
+		super();
+		NIC = nIC;
+		this.name = name;
+		Department = department;
+		this.date = date;
+		Designation = designation;
 	}
 	
-	public User(String name, String email, String country) {
+	public User(String name, String department, String date, String designation) {
 		super();
 		this.name = name;
-		this.email = email;
-		this.country = country;
+		Department = department;
+		this.date = date;
+		Designation = designation;
 	}
 
-	public User(int id, String name, String email, String country) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.country = country;
+	public int getNIC() {
+		return NIC;
 	}
-
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
+	public void setNIC(int nIC) {
+		NIC = nIC;
 	}
 	public String getName() {
 		return name;
@@ -42,16 +37,26 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail() {
-		return email;
+	public String getDepartment() {
+		return Department;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDepartment(String department) {
+		Department = department;
 	}
-	public String getCountry() {
-		return country;
+	public String getDate() {
+		return date;
 	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setDate(String date) {
+		this.date = date;
 	}
+	public String getDesignation() {
+		return Designation;
+	}
+	public void setDesignation(String designation) {
+		Designation = designation;
+	}
+	
+	
+	
+
 }
